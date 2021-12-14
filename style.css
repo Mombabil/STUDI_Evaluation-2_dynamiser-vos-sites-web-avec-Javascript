@@ -1,0 +1,13 @@
+header, footer, main{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+main{
+    display: flex;
+    justify-content: space-evenly;
+}
+    .player{
+        border: 1px solid black;
+    }
