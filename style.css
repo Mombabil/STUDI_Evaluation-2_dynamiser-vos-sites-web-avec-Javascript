@@ -1,7 +1,16 @@
 
+@font-face {
+    font-family: "Lato";
+    src:    url("Lato/Lato-Black.ttf") format("ttf"),
+            url("Lato/Lato-BlackItalic.ttf") format("ttf")
+            url("Lato/Lato-Bold.ttf") format("ttf")
+            url("Lato/Lato-Regular.ttf") format("ttf")
+   }
+
 body{
     background-image: url('images/fond_albion.jpg');
     background-size: cover;
+    font-family: Lato, serif;
 }
 
 header, footer, main{
@@ -16,6 +25,7 @@ main{
 }
     .player{
         border: 1px solid black;
+        border-radius: 5px;
         background: white;
     }
 #action{
@@ -23,5 +33,6 @@ main{
 }
 .lifePoint{
     border: 1px solid black;
+    border-radius: 5px;
     margin-top: 35px;
 }
