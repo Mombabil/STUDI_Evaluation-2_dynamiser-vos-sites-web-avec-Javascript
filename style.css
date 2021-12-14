@@ -1,7 +1,7 @@
 header, footer, main{
     text-align: center;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 main{
@@ -11,3 +11,10 @@ main{
     .player{
         border: 1px solid black;
     }
+#action{
+    text-align: center;
+}
+.lifePoint{
+    border: 1px solid black;
+    margin-top: 35px;
+}

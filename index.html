@@ -17,40 +17,78 @@
     <header class="container">
         <h1>NOM DU JEU</h1>
     </header>
+
+    <!-- SELECTION DES JOUEURS -->
     <main class="container">
         <div class="row">
-        <div id="player1" class="player col-lg-4">
-            <h2>JOUEUR 1</h2>
-            <label for="select-player-1">Choisissez votre joueur :</label>
-            <select name="player" id="select-player-1">
-                <option value="">Selectionnez votre joueur</option>
-                <option value="Orayon">Orayon</option>
-                <option value="Shachoca">Shachoca</option>
-                <option value="Hakouu">Hakouu</option>
-                <option value="Leoking">leoking</option>
-                <option value="Mombabil">Mombabil</option>
-                <option value="Elmaria">Elmaria</option>
-            </select>
-            <canvas width="300" height="300" id="canvas">Affiche le stuff du joueur selectionné</canvas>
-        </div>
-        <div class="col-lg-4">
-            <img src="" alt="logo albion-online">
-        </div>
-        <div id="player2" class="player col-lg-4">
-            <h2>JOUEUR 2</h2>
-            <label for="select-player-2">Choisissez votre joueur :</label>
-            <select name="player" id="select-player-2">
-                <option value="">Selectionnez votre joueur</option>
-                <option value="Orayon">Orayon</option>
-                <option value="Shachoca">Shachoca</option>
-                <option value="Hakouu">Hakouu</option>
-                <option value="Leoking">leoking</option>
-                <option value="Mombabil">Mombabil</option>
-                <option value="Elmaria">Elmaria</option>
-            </select>
-            <canvas width="300" height="300" id="canvas">Affiche le stuff du joueur selectionné</canvas>
+            <div id="player1" class="player col-lg-4">
+                <h2>JOUEUR 1</h2>
+                <label for="select-player-1">Choisissez votre joueur :</label>
+                <select name="player" id="select-player-1">
+                    <option value="">Selectionnez votre joueur</option>
+                    <option value="Orayon">Orayon</option>
+                    <option value="Shachoca">Shachoca</option>
+                    <option value="Hakouu">Hakouu</option>
+                    <option value="Leoking">leoking</option>
+                    <option value="Mombabil">Mombabil</option>
+                    <option value="Elmaria">Elmaria</option>
+                </select>
+                <canvas width="200" height="300" id="canvas">Affiche le stuff du joueur selectionné</canvas>
+            </div>
+            <div class="col-lg-4">
+                <img src="" alt="logo albion-online">
+            </div>
+            <div id="player2" class="player col-lg-4">
+                <h2>JOUEUR 2</h2>
+                <label for="select-player-2">Choisissez votre joueur :</label>
+                <select name="player" id="select-player-2">
+                    <option value="">Selectionnez votre joueur</option>
+                    <option value="Orayon">Orayon</option>
+                    <option value="Shachoca">Shachoca</option>
+                    <option value="Hakouu">Hakouu</option>
+                    <option value="Leoking">leoking</option>
+                    <option value="Mombabil">Mombabil</option>
+                    <option value="Elmaria">Elmaria</option>
+                </select>
+                <canvas width="200" height="300" id="canvas">Affiche le stuff du joueur selectionné</canvas>
+            </div>
         </div>
     </main>
+    <!-- BOUTONS D'INTERACTIONS DES JOUEURS -->
+    <div class="container" id="action">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <button>CHARGER</button>
+                    </div>
+                    <div class="col-lg-6">
+                        <button>ATTAQUER</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">DE</div>
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <button>CHARGER</button>
+                    </div>
+                    <div class="col-lg-6">
+                        <button>ATTAQUER</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BARRE DE VIE DES JOUEURS-->
+    <div class="container">
+        <div class="row">
+            <canvas width="auto" height="30px" class="lifePoint col-lg-4">Barre de vie des joueurs</canvas>
+            <div class="col-lg-4" style="text-align: center;"><== Vie restante ==></div>
+            <canvas width="auto" height="30px" class="lifePoint col-lg-4">Barre de vie des joueurs</canvas>
+        </div>
+    </div>
     <footer class="container">
         <button>REGLE DU JEU</button>
         <button>NOUVELLE PARTIE</button>
