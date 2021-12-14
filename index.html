@@ -13,9 +13,9 @@
     <title>Wrong Online</title>
 </head>
 <body> 
-
+    <!-- NOM DU JEU -->
     <header class="container">
-        <h1>NOM DU JEU</h1>
+        <h1>WRONG Online</h1>
     </header>
 
     <!-- SELECTION DES JOUEURS -->
@@ -23,7 +23,6 @@
         <div class="row">
             <div id="player1" class="player col-lg-4">
                 <h2>JOUEUR 1</h2>
-                <label for="select-player-1">Choisissez votre joueur :</label>
                 <select name="player" id="select-player-1">
                     <option value="">Selectionnez votre joueur</option>
                     <option value="Orayon">Orayon</option>
@@ -34,14 +33,13 @@
                     <option value="Elmaria">Flote</option>
                     <option value="Elmaria">Aamog</option>
                 </select>
-                <canvas width="200" height="300" id="canvas">Affiche le stuff du joueur selectionné</canvas>
+                <img src="images/no-player.png" alt="stuff du joueur" width="300" height="300" class="stuff"  style="border: 1px solid black; margin-top: 10px;" />
             </div>
             <div class="col-lg-4">
-                <img src="" alt="logo albion-online">
+                <img src="images/albion.jpg" alt="logo albion-online">
             </div>
             <div id="player2" class="player col-lg-4">
                 <h2>JOUEUR 2</h2>
-                <label for="select-player-2">Choisissez votre joueur :</label>
                 <select name="player" id="select-player-2">
                     <option value="">Selectionnez votre joueur</option>
                     <option value="Orayon">Orayon</option>
@@ -52,7 +50,7 @@
                     <option value="Elmaria">Flote</option>
                     <option value="Elmaria">Aamog</option>
                 </select>
-                <canvas width="200" height="300" id="canvas">Affiche le stuff du joueur selectionné</canvas>
+                <img src="images/no-player.png" alt="stuff du joueur" width="300" height="300" class="canvas" style="border: 1px solid black; margin-top: 10px;" />
             </div>
         </div>
     </main>
@@ -87,10 +85,12 @@
     <div class="container">
         <div class="row">
             <canvas width="auto" height="30px" class="lifePoint col-lg-4">Barre de vie des joueurs</canvas>
-            <div class="col-lg-4" style="text-align: center;"><== Vie restante ==></div>
+            <div class="col-lg-4" style="text-align: center; line-height: 78px;"><== Vie restante ==></div>
             <canvas width="auto" height="30px" class="lifePoint col-lg-4">Barre de vie des joueurs</canvas>
         </div>
     </div>
+
+    <!-- BOUTONS DE GESTION DE LA PARTIE -->
     <footer class="container">
         <button>REGLE DU JEU</button>
         <button>NOUVELLE PARTIE</button>
