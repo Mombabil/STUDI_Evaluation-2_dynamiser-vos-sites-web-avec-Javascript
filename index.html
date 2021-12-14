@@ -9,15 +9,17 @@
     rel="stylesheet" 
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
     crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Wrong Online</title>
 </head>
 <body> 
 
-    <header>
+    <header class="container">
         <h1>NOM DU JEU</h1>
     </header>
-    <main>
-        <div id="player1">
+    <main class="container">
+        <div class="row">
+        <div id="player1" class="player col-lg-4">
             <h2>JOUEUR 1</h2>
             <label for="select-player-1">Choisissez votre joueur :</label>
             <select name="player" id="select-player-1">
@@ -31,7 +33,10 @@
             </select>
             <canvas width="300" height="300" id="canvas">Affiche le stuff du joueur selectionné</canvas>
         </div>
-        <div id="player2">
+        <div class="col-lg-4">
+            <img src="" alt="logo albion-online">
+        </div>
+        <div id="player2" class="player col-lg-4">
             <h2>JOUEUR 2</h2>
             <label for="select-player-2">Choisissez votre joueur :</label>
             <select name="player" id="select-player-2">
@@ -46,7 +51,7 @@
             <canvas width="300" height="300" id="canvas">Affiche le stuff du joueur selectionné</canvas>
         </div>
     </main>
-    <footer>
+    <footer class="container">
         <button>REGLE DU JEU</button>
         <button>NOUVELLE PARTIE</button>
         <button>SON (ON/OFF)</button>
