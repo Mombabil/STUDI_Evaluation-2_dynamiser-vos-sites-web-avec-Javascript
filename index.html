@@ -11,7 +11,48 @@
     crossorigin="anonymous">
     <title>Wrong Online</title>
 </head>
-<body>
+<body> 
+
+    <header>
+        <h1>NOM DU JEU</h1>
+    </header>
+    <main>
+        <div id="player1">
+            <h2>JOUEUR 1</h2>
+            <label for="select-player-1">Choisissez votre joueur :</label>
+            <select name="player" id="select-player-1">
+                <option value="">Selectionnez votre joueur</option>
+                <option value="Orayon">Orayon</option>
+                <option value="Shachoca">Shachoca</option>
+                <option value="Hakouu">Hakouu</option>
+                <option value="Leoking">leoking</option>
+                <option value="Mombabil">Mombabil</option>
+                <option value="Elmaria">Elmaria</option>
+            </select>
+            <canvas width="300" height="300" id="canvas">Affiche le stuff du joueur selectionné</canvas>
+        </div>
+        <div id="player2">
+            <h2>JOUEUR 2</h2>
+            <label for="select-player-2">Choisissez votre joueur :</label>
+            <select name="player" id="select-player-2">
+                <option value="">Selectionnez votre joueur</option>
+                <option value="Orayon">Orayon</option>
+                <option value="Shachoca">Shachoca</option>
+                <option value="Hakouu">Hakouu</option>
+                <option value="Leoking">leoking</option>
+                <option value="Mombabil">Mombabil</option>
+                <option value="Elmaria">Elmaria</option>
+            </select>
+            <canvas width="300" height="300" id="canvas">Affiche le stuff du joueur selectionné</canvas>
+        </div>
+    </main>
+    <footer>
+        <button>REGLE DU JEU</button>
+        <button>NOUVELLE PARTIE</button>
+        <button>SON (ON/OFF)</button>
+    </footer>
+    
+    
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
