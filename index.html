@@ -65,7 +65,7 @@
             <div class="col-lg-4">
                 <div class="row">
                     <div class="col-lg-6">
-                        <button id="loadPlayer1">CHARGER</button>
+                        <button id="loadPlayer1">CHARGER : <span id="puissance1">0</span></button>
                     </div>
                     <div class="col-lg-6">
                         <button id="attackPlayer1">ATTAQUER</button>
@@ -76,7 +76,7 @@
             <div class="col-lg-4">
                 <div class="row">
                     <div class="col-lg-6">
-                        <button id="loadPlayer2">CHARGER</button>
+                        <button id="loadPlayer2">CHARGER : <span id="puissance2">0</span></button>
                     </div>
                     <div class="col-lg-6">
                         <button id="attackPlayer2">ATTAQUER</button>
@@ -89,9 +89,9 @@
     <!-- BARRE DE VIE DES JOUEURS-->
     <div class="container">
         <div class="row">
-            <canvas width="auto" height="30px" class="lifePoint col-lg-4" id="lifePlayer1">Barre de vie des joueurs</canvas>
+            <progress id="lifePlayer1" max="100" value="0" class="col-lg-4 bg-success progressBar">100%</progress>
             <div class="col-lg-4"></div>
-            <canvas width="auto" height="30px" class="lifePoint col-lg-4" id="lifePlayer2">Barre de vie des joueurs</canvas>
+            <progress id="lifePlayer2" max="100" value="0" class="col-lg-4 bg-success progressBar">100%</progress>
         </div>
     </div>
 
@@ -117,6 +117,7 @@
                       et c'est au tour du joueur suivant d'attaquer. Appuyer sur ATTAQUER pour lancer votre attaque une fois 
                       que votre score cumulé vous convient.
                   </p>
+                  <p>Le joueur 1 commence.</p>
                   <p>Bonne chance.</p>
                 </div>
               </div>
