@@ -29,6 +29,7 @@ function choicePlayer1 (){
         if(action1.target.value !== ''){
             player1.disabled = true
         }
+        lifeBar1()
     })
 }
 function choicePlayer2 (){
@@ -62,9 +63,39 @@ function choicePlayer2 (){
         if(action2.target.value !== ''){
             player2.disabled = true
         }
+        lifeBar2()
     })
 }
+function lifeBar1 (){
+    let canvasP1 = document.getElementById('lifePlayer1')
+    let ctxP1
+
+    if(canvasP1.getContext){
+        ctxP1 = canvasP1.getContext('2d')
+    }else{
+        alert('Votre navigateur est trop ancien et ne peut pas afficher le code Javascript, merci de mettre a jour votre navigateur')
+    }
+    ctxP1.fillStyle = 'green'
+    ctxP1.fillRect(0,0, 440, 43)
 
 
+}
+function lifeBar2(){
+    let canvasP2 = document.getElementById('lifePlayer2')
+    let ctxP2
+
+    if(canvasP2.getContext){
+        ctxP2 = canvasP2.getContext('2d')
+    }else{
+        alert('Votre navigateur est trop ancien et ne peut pas afficher le code Javascript, merci de mettre a jour votre navigateur')
+    }
+    ctxP2.fillStyle = 'green'
+    ctxP2.fillRect(0,0, 440, 43)
+}
+
+//Si le joueur n'a pas initialisé la partie, en selectionnant les deux joueurs, un message d'erreur apparait
+function error(){
+    alert('Vous devez d\'abord choisir les joueurs avant de lancer les dés')
+}
 choicePlayer1()
 choicePlayer2()
