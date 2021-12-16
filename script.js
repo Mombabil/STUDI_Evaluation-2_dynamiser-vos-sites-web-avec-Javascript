@@ -92,6 +92,72 @@ function lifeBar2(){
     ctxP2.fillStyle = 'green'
     ctxP2.fillRect(0,0, 440, 43)
 }
+function loadPlayer1(){
+    let load = document.getElementById('loadPlayer1')
+    let de = document.getElementById('de')
+    let loadEnnemy = document.getElementById('loadPlayer2')
+    let attackEnnemy = document.getElementById('attackPlayer2')
+
+    loadEnnemy.disabled = true
+    attackEnnemy.disabled = true
+
+    load.addEventListener('click', (action) =>{
+        let random = Math.floor(Math.random() * (6 - 0)) +1 
+        switch(random){
+            case 1:
+                de.src='images/de1.jpg'
+                break
+            case 2:
+                de.src='images/de2.jpg'
+                break
+            case 3:
+                de.src='images/de3.jpg'
+                break
+            case 4:
+                de.src='images/de4.jpg'
+                break
+            case 5:
+                de.src='images/de5.jpg'
+                break
+            case 6:
+                de.src='images/de6.jpg'
+                break
+        }
+    })
+}
+function loadPlayer2(){
+    let load = document.getElementById('loadPlayer2')
+    let de = document.getElementById('de')
+    let loadEnnemy = document.getElementById('loadPlayer1')
+    let attackEnnemy = document.getElementById('attackPlayer1')
+
+    loadEnnemy.disabled = true
+    attackEnnemy.disabled = true
+
+    load.addEventListener('click', (action) =>{
+        let random = Math.floor(Math.random() * (6 - 0)) +1 
+        switch(random){
+            case 1:
+                de.src='images/de1.jpg'
+                break
+            case 2:
+                de.src='images/de2.jpg'
+                break
+            case 3:
+                de.src='images/de3.jpg'
+                break
+            case 4:
+                de.src='images/de4.jpg'
+                break
+            case 5:
+                de.src='images/de5.jpg'
+                break
+            case 6:
+                de.src='images/de6.jpg'
+                break
+        }
+    })
+}
 
 //Si le joueur n'a pas initialisé la partie, en selectionnant les deux joueurs, un message d'erreur apparait
 function error(){
@@ -99,3 +165,4 @@ function error(){
 }
 choicePlayer1()
 choicePlayer2()
+loadPlayer2()
