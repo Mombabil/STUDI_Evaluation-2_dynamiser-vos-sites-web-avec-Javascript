@@ -8,25 +8,25 @@ function choicePlayer(){
     //la liste devient disabled et le joueur ne peut plus changer de personnage
     player1.addEventListener('change', (action1) => {
         switch(action1.target.value){
-            case 'Orayon-1':
+            case 'Orayon':
                 imgPlayer1.src='images/orayon.png'
                 break
-            case 'Shachoca-1':
+            case 'Shachoca':
                 imgPlayer1.src='images/shachoca.png'
                 break
-            case 'Hakoou-1':
+            case 'Hakoou':
                 imgPlayer1.src='images/hakoou.png'
                 break
-            case 'Vengorogo-1':
+            case 'Vengorogo':
                 imgPlayer1.src='images/vengorogo.png'
                 break
-            case 'Mombabil-1':
+            case 'Mombabil':
                 imgPlayer1.src='images/mombabil.png'
                 break
-            case 'Flote-1':
+            case 'Flote':
                 imgPlayer1.src='images/flote.png'
                 break
-            case 'Aamog-1':
+            case 'Aamog':
                 imgPlayer1.src='images/aamog.png'
                 break
         }
@@ -43,25 +43,25 @@ function choicePlayer(){
     //la liste devient disabled et le joueur ne peut plus changer de personnage
     player2.addEventListener('change', (action2) => {
         switch(action2.target.value){
-            case 'Orayon-2':
+            case 'Orayon':
                 imgPlayer2.src='images/orayon.png'
                 break
-            case 'Shachoca-2':
+            case 'Shachoca':
                 imgPlayer2.src='images/shachoca.png'
                 break
-            case 'Hakoou-2':
+            case 'Hakoou':
                 imgPlayer2.src='images/hakoou.png'
                 break
-            case 'Vengorogo-2':
+            case 'Vengorogo':
                 imgPlayer2.src='images/vengorogo.png'
                 break
-            case 'Mombabil-2':
+            case 'Mombabil':
                 imgPlayer2.src='images/mombabil.png'
                 break
-            case 'Flote-2':
+            case 'Flote':
                 imgPlayer2.src='images/flote.png'
                 break
-            case 'Aamog-2':
+            case 'Aamog':
                 imgPlayer2.src='images/aamog.png'
                 break
         }
@@ -153,6 +153,9 @@ function loadPlayer(){
 
         }
         puissance1.innerText = count
+
+        //a chaque fois que l'on clique sur le dé, le son dice.mp3 est joué
+        diceSound()
     })
     // lancement du dé joueur 2
     load2.addEventListener('click', (action) =>{
@@ -197,6 +200,9 @@ function loadPlayer(){
 
         }
         puissance2.innerText = count
+
+        //a chaque fois que l'on clique sur le dé, le son dice.mp3 est joué
+        diceSound()
     })
 
     //ACTIONS SUR LES BOUTON ATTAQUER
@@ -233,6 +239,7 @@ function loadPlayer(){
         load1.disabled = true
         attack1.disabled = true
 
+        attackSoundP1()
     })
     //attaque du joueur 2
     let remainingLifeP1 = 100
@@ -261,9 +268,99 @@ function loadPlayer(){
         load2.disabled = true
         attack2.disabled = true
 
+        attackSoundP2()
     })
 }
 
+//on joue un son chaque fois que le dé est lancé
+function diceSound(){
+    let dice = new Audio("sounds/dice.mp3")
+    dice.play()
+    dice.volume = 0.2
+}
+//on joue un son different en fonction du joueur choisie au moment d'attaquer
+function attackSoundP1(){
+    let player1 = document.getElementById('select-player-1')
+    switch(player1.value){
+        case 'Orayon':
+            let orayon = new Audio('sounds/doubleblade.mp3')
+            orayon.play()
+            orayon.volume = 0.5
+            break
+        case 'Shachoca':
+            let shachoca = new Audio('sounds/frost.mp3')
+            shachoca.play()
+            shachoca.volume = 0.5
+            break
+        case 'Hakoou':
+            let hakoou = new Audio('sounds/bearpaw.mp3')
+            hakoou.play()
+            hakoou.volume = 0.5
+            break
+        case 'Vengorogo':
+            let vengorogo = new Audio('sounds/claw.mp3')
+            vengorogo.play()
+            vengorogo.volume = 0.5
+            break
+        case 'Mombabil':
+            let mombabil = new Audio('sounds/spear.mp3')
+            mombabil.play()
+            mombabil.volume = 0.5
+            break
+        case 'Flote':
+            let flote = new Audio('sounds/holy.mp3')
+            flote.play()
+            flote.volume = 0.5
+            break
+        case 'Aamog':
+            let aamog = new Audio('sounds/mace.mp3')
+            aamog.play()
+            aamog.volume = 0.5
+            break
+    }
+
+}
+function attackSoundP2(){
+    let player1 = document.getElementById('select-player-2')
+    switch(player1.value){
+        case 'Orayon':
+            let orayon = new Audio('sounds/doubleblade.mp3')
+            orayon.play()
+            orayon.volume = 0.5
+            break
+        case 'Shachoca':
+            let shachoca = new Audio('sounds/frost.mp3')
+            shachoca.play()
+            shachoca.volume = 0.5
+            break
+        case 'Hakoou':
+            let hakoou = new Audio('sounds/bearpaw.mp3')
+            hakoou.play()
+            hakoou.volume = 0.5
+            break
+        case 'Vengorogo':
+            let vengorogo = new Audio('sounds/claw.mp3')
+            vengorogo.play()
+            vengorogo.volume = 0.5
+            break
+        case 'Mombabil':
+            let mombabil = new Audio('sounds/spear.mp3')
+            mombabil.play()
+            mombabil.volume = 0.5
+            break
+        case 'Flote':
+            let flote = new Audio('sounds/holy.mp3')
+            flote.play()
+            flote.volume = 0.5
+            break
+        case 'Aamog':
+            let aamog = new Audio('sounds/mace.mp3')
+            aamog.play()
+            aamog.volume = 0.5
+            break
+    }
+
+}
 //on recharge la page pour créer une nouvelle partie
 function nouvellePartie(){
     let restart = document.getElementById('newGame')
