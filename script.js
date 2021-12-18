@@ -220,6 +220,12 @@ function loadPlayer(){
         let life = document.getElementById('lifePlayer2')
         remainingLifeP2 = remainingLifeP2 - puissance1.innerText
         life.value = remainingLifeP2
+
+        if(life.value <= 0){
+            alert('Felicitation au joueur 1. Vous avez gagné !')
+            location.reload()
+        }
+
         puissance1.innerText = 0
         count = 0
         load2.disabled = false
@@ -242,6 +248,12 @@ function loadPlayer(){
         let life = document.getElementById('lifePlayer1')
         remainingLifeP1 = remainingLifeP1 - puissance2.innerText
         life.value = remainingLifeP1
+
+        if(life.value <= 0){
+            alert('Felicitation au joueur 2. Vous avez gagné !')
+            location.reload()
+        }
+
         puissance2.innerText = 0
         count = 0
         load1.disabled = false
@@ -252,6 +264,14 @@ function loadPlayer(){
     })
 }
 
+//on recharge la page pour créer une nouvelle partie
+function nouvellePartie(){
+    let restart = document.getElementById('newGame')
+    restart.addEventListener('click', (action) =>{
+        location.reload()
+    })
+}
+
 choicePlayer()
 loadPlayer()
-
+nouvellePartie()
