@@ -1,3 +1,8 @@
+@media screen and (max-width: 991px){
+    .logo-albion{
+        display: none;
+    }
+}
 
 @font-face {
     font-family: "Lato";
@@ -21,17 +26,19 @@ header, main{
 
 main{
     display: flex;
-    justify-content: space-evenly;
 }
     .player{
         border: 1px solid black;
         border-radius: 5px;
         background: white;
+        padding-bottom: 50px;
     }
     #de{
-        position: relative;
-        top: 30px;
         border-radius: 30px;
+        margin-bottom: 20px;
+    }
+    .logo{
+        width: 100%;
     }
 #action{
     text-align: center;
